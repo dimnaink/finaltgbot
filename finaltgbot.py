@@ -1,6 +1,6 @@
 import telebot,os,random
 
-bot=telebot.TeleBot("6033924632:AAEPrXW53y2NwjtT_4DD6jEg5p1Dyb3DHv8")
+bot=telebot.TeleBot("TOKEN")
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
         bot.reply_to(message, "Привет! Я твой Telegram бот. Напиши что-нибудь!")
@@ -40,5 +40,6 @@ def send_help(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
         bot.reply_to(message, message.text)
+
 
 bot.polling()
